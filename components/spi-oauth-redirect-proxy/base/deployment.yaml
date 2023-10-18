@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: spi-oauth-redirect-proxy
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: spi-oauth-redirect-proxy
+    app.kubernetes.io/part-of: spi-oauth-redirect-proxy-prod
+  name: spi-oauth-redirect-proxy
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: spi-oauth-redirect-proxy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: spi-oauth-redirect-proxy
+    spec:
+      containers:
+      - env:
+        - name: ALLOWED_REDIRECT_URLS
+          value: .openshiftapps.com,.ci.openshift.org,.ci.stonesoupengineering.com,.opentlc.com,.opentlc.com
+        image: image
+        imagePullPolicy: Always
+        name: container-image
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 10m
+            memory: 256Mi
+status: {}
