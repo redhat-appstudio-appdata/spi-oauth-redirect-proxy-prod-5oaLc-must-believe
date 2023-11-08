@@ -11,7 +11,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: quay.io/redhat-user-workloads/rhtap-qe-shared-tenant/spi-oauth-redirect-proxy-prod/spi-oauth-redirect-proxy@sha256:89491a1c44725d5c1078ca4c07ff9e4bb287d334a04b317cf42c8ee5a94f097a
+      - image: quay.io/redhat-user-workloads/rhtap-qe-shared-tenant/spi-oauth-redirect-proxy-prod/spi-oauth-redirect-proxy@sha256:dca3fea30c81836c6f4dddd0cccf41b6c08563086633183a17ec35cdbc996426
         name: container-image
         resources: {}
 status: {}
