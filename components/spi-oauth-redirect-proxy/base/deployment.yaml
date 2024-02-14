@@ -26,7 +26,7 @@ spec:
       - env:
         - name: ALLOWED_REDIRECT_URLS
           value: .openshiftapps.com,.ci.openshift.org,.ci.stonesoupengineering.com,.opentlc.com,.opentlc.com
-        image: quay.io/redhat-user-workloads/rhtap-qe-shared-tenant/spi-oauth-redirect-proxy-prod/spi-oauth-redirect-proxy@sha256:ce5395651f7b1e9efd478b25a8c54121e4ee0ffaec131b5a924ceca8056905e4
+        image: quay.io/redhat-user-workloads/rhtap-qe-shared-tenant/spi-oauth-redirect-proxy-prod/spi-oauth-redirect-proxy@sha256:005721fbfaee61cbe296320ff79a9614aac8d40ba0fe4e2d22e01249fb3466c1
         imagePullPolicy: Always
         name: container-image
         ports:
