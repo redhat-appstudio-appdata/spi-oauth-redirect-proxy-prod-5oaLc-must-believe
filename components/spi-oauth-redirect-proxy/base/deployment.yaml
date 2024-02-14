@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: spi-oauth-redirect-proxy-prod
   name: spi-oauth-redirect-proxy
 spec:
-  replicas: 0
+  replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
